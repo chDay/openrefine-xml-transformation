@@ -1,0 +1,79 @@
+<!-- PREFIX -->
+<?xml version="1.0" encoding="UTF-8"?>
+<mods>
+    
+<!--ROW TEMPLATE -->    
+    <record>
+        
+        <identifier type="accession">{{cells["Accession"].value.escape("xml")}}</identifier>
+        <identifier type="local">{{cells["Identifier"].value.escape("xml")}}</identifier>
+        
+        <titleInfo>
+            <title>{{cells["Title"].value.escape("xml")}}</title>
+        </titleInfo>
+        <titleInfo type="uniform">
+            <title>{{cells["UniformTitle"].value.escape("xml")}}</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+            <title>{{cells["AltTitle"].value.escape("xml")}}</title>
+        </titleInfo>
+        
+        <name>
+            <creator>{{cells["Creator"].value.escape("xml")}}</creator>
+
+            <author>{{cells["Author"].value.escape("xml")}}</author>
+        
+            <corporate>{{cells["GroupCreator"].value.escape("xml")}}</corporate>
+        </name>
+        
+        <contributors>{{cells["Contributors"].value.escape("xml")}}</contributors>
+        
+        <originInfo eventType="publication">
+            <dateIssued>{{cells["Date"].value.escape("xml")}}</dateIssued>
+            <dateIssued keyDate="yes" encoding="w3cdtf">{{cells["KeyDate"].value.escape("xml")}}</dateIssued>
+            <place>
+                <placeTerm type="text">{{cells["Place"].value.escape("xml")}}</placeTerm>
+                <placeTerm authority="marccountry" type="code">{{cells["CountryCode"].value.escape("xml")}}</placeTerm>
+            </place>
+        </originInfo>
+        
+        <identifier type="isbn">{{cells["ISBN"].value.escape("xml")}}</identifier>
+        <identifier type="issn">{{cells["ISSN"].value.escape("xml")}}</identifier>
+        <identifier type="lcc">{{cells["LCC"].value.escape("xml")}}</identifier>
+        <identifier type="oclc">{{cells["OCLC"].value.escape("xml")}}</identifier>
+        
+        <language>
+            <languageTerm type="text">{{cells["Language"].value.escape("xml")}}</languageTerm>
+            <languageTerm type="code" authority="iso639-2b">{{cells["LanguageCode"].value.escape("xml")}}</languageTerm>
+        </language>
+        
+        <abstract>{{cells["Description"].value.escape("xml")}}</abstract>
+        
+        <physicalDescription>
+            <extent>{{cells["Dimensions"].value.escape("xml")}}</extent>
+            <form type="publication format">{{cells["PublicationFormat"].value.escape("xml")}}</form>
+        </physicalDescription>
+        
+        <location>{{cells["Location"].value.escape("xml")}}</location>
+        
+        <subject>
+            <subjectName>{{cells["FeaturedArtists"].value.escape("xml")}}</subjectName>
+            <lcsh>{{cells["SubjectLCSH"].value.escape("xml")}}</lcsh>
+            <trctemp>{{cells["SubjectTRC"].value.escape("xml")}}</trctemp>
+            <subjectLocal>{{cells["SubjectLocal"].value.escape("xml")}}</subjectLocal>
+        </subject>
+        
+        <note type="administrative">{{cells["AdminNote"].value.escape("xml")}}</note>
+
+        <typeOfResource>{{cells["StillImage"].value.escape("xml")}}</typeOfResource>
+        <genre>{{cells["Genre"].value.escape("xml")}}</genre>
+        <note type="digitizationspecifications">{{cells["DigitizationSpecifications"].value.escape("xml")}}</note>
+        <accessCondition type="use and reproduction">{{cells["AccessCondition"].value.escape("xml")}}</accessCondition>
+        
+    </record>
+    
+    <!--ROW SEPARATOR = 1 Carriage Return -->
+    
+    <!--SUFFIX -->
+    
+</mods>
