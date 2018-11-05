@@ -1,8 +1,6 @@
 <!-- PREFIX -->
 <?xml version="1.0" encoding="UTF-8"?>
 <mods>
-
-<!-- ignore opening mods tag -->
     
 <!--ROW TEMPLATE -->    
     <record>
@@ -62,12 +60,11 @@
         
         <location>{{cells["Location"].value.escape("xml")}}</location>
         
-        <subject>
-            <subjectName>{{cells["FeaturedArtists"].value.escape("xml")}}</subjectName>
-            <lcsh>{{cells["SubjectLCSHTopic"].value.escape("xml")}}</lcsh>
-            <trctemp>{{cells["SubjectTRC"].value.escape("xml")}}</trctemp>
-            <subjectLocal>{{cells["SubjectLocal"].value.escape("xml")}}</subjectLocal>
-        </subject>
+        <subjectName>{{cells["FeaturedArtists"].value.escape("xml")}}</subjectName>
+        <lcsh>{{cells["SubjectLCSHTopic"].value.escape("xml")}}</lcsh>
+        <trctemp>{{cells["SubjectTRC"].value.escape("xml")}}</trctemp>
+        <subjectLocal>{{cells["SubjectLocal"].value.escape("xml")}}</subjectLocal>
+
         
         <note type="local">{{cells["Notes"].value.escape("xml")}}</note>
         <note type="administrative">{{cells["AdminNote"].value.escape("xml")}}</note>
@@ -86,7 +83,5 @@
     <!--ROW SEPARATOR = 1 Carriage Return -->
     
     <!--SUFFIX -->
-
-<!-- ignore closing mods tag -->
     
 </mods>
