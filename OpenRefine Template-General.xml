@@ -1,6 +1,8 @@
 <!-- PREFIX -->
 <?xml version="1.0" encoding="UTF-8"?>
 <mods>
+
+<!-- ignore opening mods tag -->
     
 <!--ROW TEMPLATE -->    
     <record>
@@ -58,22 +60,29 @@
         
         <subject>
             <subjectName>{{cells["FeaturedArtists"].value.escape("xml")}}</subjectName>
-            <lcsh>{{cells["SubjectLCSH"].value.escape("xml")}}</lcsh>
+            <lcsh>{{cells["SubjectLCSHTopic"].value.escape("xml")}}</lcsh>
             <trctemp>{{cells["SubjectTRC"].value.escape("xml")}}</trctemp>
             <subjectLocal>{{cells["SubjectLocal"].value.escape("xml")}}</subjectLocal>
         </subject>
         
+        <note type="local">{{cells["Notes"].value.escape("xml")}}</note>
         <note type="administrative">{{cells["AdminNote"].value.escape("xml")}}</note>
 
-        <typeOfResource>{{cells["StillImage"].value.escape("xml")}}</typeOfResource>
+<!--Hard coded because of majority appripriateness. Customize as needed -->
+        <typeOfResource>Still Image</typeOfResource>
+
         <genre>{{cells["Genre"].value.escape("xml")}}</genre>
         <note type="digitizationspecifications">{{cells["DigitizationSpecifications"].value.escape("xml")}}</note>
-        <accessCondition type="use and reproduction">{{cells["AccessCondition"].value.escape("xml")}}</accessCondition>
+
+<!--Hard coded because of majority appripriateness. Customize as needed -->
+  <accessCondition type="use and reproduction">For Rights information please contact Special Collections at the John M. Flaxman Library.</accessCondition>
         
     </record>
     
     <!--ROW SEPARATOR = 1 Carriage Return -->
     
     <!--SUFFIX -->
+
+<!-- ignore closing mods tag -->
     
 </mods>
