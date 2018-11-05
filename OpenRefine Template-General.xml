@@ -54,6 +54,10 @@
         <physicalDescription>
             <extent>{{cells["Dimensions"].value.escape("xml")}}</extent>
             <form type="publication format">{{cells["PublicationFormat"].value.escape("xml")}}</form>
+
+            <note type="label">{{cells["TranscriptionTyped"].value.escape("xml")}}</note>
+            <note type="handwriting">{{cells["TranscriptionHand"].value.escape("xml")}}</note>
+                    
         </physicalDescription>
         
         <location>{{cells["Location"].value.escape("xml")}}</location>
