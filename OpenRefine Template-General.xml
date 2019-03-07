@@ -26,11 +26,13 @@
             <corporate>{{cells["GroupCreator"].value.escape("xml")}}</corporate>
         </name>
         
-        <contributors>{{cells["Contributors"].value.escape("xml")}}</contributors>
+        <contributors >{{cells["Contributors"].value.escape("xml")}}</contributors>
+        <contributorscorporate>{{cells["ContributorsCorporate"].value.escape("xml")}}</contributorscorporate>
         
         <originInfo eventType="publication">
             <dateIssued>{{cells["Date"].value.escape("xml")}}</dateIssued>
             <dateIssued keyDate="yes" encoding="w3cdtf">{{cells["KeyDate"].value.escape("xml")}}</dateIssued>
+            <publisher>{{cells["Publisher"].value.escape("xml")}}</publisher>
             <place>
                 <placeTerm type="text">{{cells["Place"].value.escape("xml")}}</placeTerm>
                 <placeTerm authority="marccountry" type="code">{{cells["CountryCode"].value.escape("xml")}}</placeTerm>
@@ -50,7 +52,7 @@
         <abstract>{{cells["Description"].value.escape("xml")}}</abstract>
         
         <physicalDescription>
-            <extent>{{cells["Dimensions"].value.escape("xml")}}</extent>
+            <extent>{{cells["Extent"].value.escape("xml")}}</extent>
             <form type="publication format">{{cells["PublicationFormat"].value.escape("xml")}}</form>
 
             <note type="label">{{cells["TranscriptionTyped"].value.escape("xml")}}</note>
@@ -68,15 +70,16 @@
         
         <note type="local">{{cells["Notes"].value.escape("xml")}}</note>
         <note type="administrative">{{cells["AdminNote"].value.escape("xml")}}</note>
+        
+        <OtherFormatURL>{{cells["OtherFormatURL"].value.escape("xml")}}</OtherFormatURL>
 
 <!--Hard coded because of majority appripriateness. Customize as needed -->
-        <typeOfResource>Still Image</typeOfResource>
+        <typeOfResource>still image</typeOfResource>
 
         <genre>{{cells["Genre"].value.escape("xml")}}</genre>
-        <note type="digitizationspecifications">{{cells["DigitizationSpecifications"].value.escape("xml")}}</note>
+        <note type="digitizations pecifications">{{cells["DigitizationSpecifications"].value.escape("xml")}}</note>
 
-<!--Hard coded because of majority appripriateness. Customize as needed -->
-  <accessCondition type="use and reproduction">For Rights information please contact Special Collections at the John M. Flaxman Library.</accessCondition>
+        <accessCondition type="use and reproduction">{{cells["UseAndReproduction"].value.escape("xml")}}</accessCondition>
         
     </record>
     
